@@ -1,0 +1,182 @@
+{
+    "HomePage": {
+        "title": "اهلا",
+        "home": "home",
+        "packages": "packages",
+        "features": "Features",
+        "aboutus": "about us",
+        "contactus": "contact us",
+        "chooselang": "choose language",
+        "headertitle": "Integrated Hosting with Amazing Features Ensuring Your Website's Continuity and Speed",
+        "headerdesc": "To retain your customers and achieve top rankings on Google, web hosting is preceded by the crucial step of selecting a unique domain that makes your online services memorable, followed by choosing a web design company that adds more wow factor to your site.",
+        "domaintitle": "Reserve Your Domain Now with Dar and Take Advantage of Amazing Offers",
+        "domaindesc": "Start by searching for your domain name or contact sales to help you reserve a unique name or an official Saudi domain, and get your website up and running in minutes!",
+        "domainbtn": "Get Started",
+        "domainservice": [".com", ".net", ".org", ".info"],
+        "domainprice": "75 SAR",
+        "packagetitle": "The hosting plan that makes your website rocket fast",
+        "packagedesc": "Do you want fast hosting with unlimited features and affordable prices?",
+        "packagekey": {
+            "currency": "SAR/Yearly",
+            "ram": "RAM",
+            "hard_disk": "Hard Disk",
+            "traffic": "Traffic",
+            "processor": "Processor",
+            "file_count": "File Count",
+            "connections_count": "Connections at the same moment",
+            "emails_count": "Emails Count",
+            "databases_count": "Databases Count",
+            "ssl_certificate": "SSL Certificate",
+            "ssh_access": "SSH Access",
+            "support": "24/7 Support"
+        },
+        "packagedetail": [
+            {
+                "title": "Save",
+                "price": "420",
+                "currency": "SAR/Yearly",
+                "ram": "2048mb",
+                "hard_disk": "unlimited",
+                "traffic": "unlimited",
+                "processor": "MHZ 5000",
+                "file_count": "500000",
+                "connections_count": "500",
+                "emails_count": "unlimited",
+                "databases_count": "unlimited",
+                "ssl_certificate": "Available",
+                "ssh_access": "Available",
+                "support": "24/7 Support (Free)",
+                "button": "Subscribe Now"
+            },
+            {
+                "title": "Launch",
+                "price": "569",
+                "currency": "SAR/Yearly",
+                "ram": "1024mb",
+                "hard_disk": "unlimited",
+                "traffic": "unlimited",
+                "processor": "MHZ 3000",
+                "file_count": "350000",
+                "connections_count": "500",
+                "emails_count": "unlimited",
+                "databases_count": "unlimited",
+                "ssl_certificate": "Available",
+                "ssh_access": "Available",
+                "support": "24/7 Support (Free)",
+                "button": "Subscribe Now"
+            },
+            {
+                "title": "Fast",
+                "price": "914",
+                "currency": "SAR/Yearly",
+                "ram": "900mb",
+                "hard_disk": "unlimited",
+                "traffic": "unlimited",
+                "processor": "MHZ 1500",
+                "file_count": "250000",
+                "connections_count": "200",
+                "emails_count": "unlimited",
+                "databases_count": "2",
+                "ssl_certificate": "Available",
+                "ssh_access": "Available",
+                "support": "24/7 Support (Free)",
+                "button": "Subscribe Now"
+            },
+            {
+                "title": "Business",
+                "price": "1810",
+                "currency": "SAR/Yearly",
+                "ram": "500mb",
+                "hard_disk": "unlimited",
+                "traffic": "unlimited",
+                "processor": "MHZ 1000",
+                "file_count": "100000",
+                "connections_count": "100",
+                "emails_count": "unlimited",
+                "databases_count": "1",
+                "ssl_certificate": "Not Available",
+                "ssh_access": "Not Available",
+                "support": "24/7 Support (Free)",
+                "button": "Subscribe Now"
+            }
+        ],
+        "featuretitle": "Website Hosting Features by Dar",
+        "featuredetail": [
+            {
+                "title": "Complete Privacy and Security for Your Website's Information",
+                "desc": "One of the main features of strong hosting is maintaining the privacy of client information. Dar has an automated server management system, and data is not stored manually but through a secret automated system that ensures complete privacy, security, and protection for your website."
+            },
+            {
+                "title": "Hosting with Powerful Resources",
+                "desc": "Dar hosting is equipped with full server resources that ensure a powerful processor and excellent memory to accommodate a large number of visitors without being affected by any technical or functional issues, and without any website downtime."
+            },
+            {
+                "title": "Dar Hosting Servers Equipped with SSD Technology",
+                "desc": "Dar hosting operates with SSD drives, which provide high speeds, transforming your website from having limited speed to very high speed, along with much better file storage and retrieval."
+            },
+            {
+                "title": "CloudFlare Technology Enhances Dar Hosting",
+                "desc": "Dar hosting comes with full server resources, ensuring a powerful processor and excellent memory to accommodate a large number of visitors without technical or functional problems and no website downtime."
+            },
+            {
+                "title": "Hosting that Supports All Programming Platforms",
+                "desc": "Dar hosting supports all platforms with various types of software. You don't have to worry about not being able to run any program or file, as Dar has a professional hosting team with complete expertise."
+            },
+            {
+                "title": "Dar Hosting Protection Certified by Norton Symantec",
+                "desc": "Dar hosting is distinguished by being certified by Norton, a globally recognized company specializing in web protection, IT, and cybersecurity. This ensures that Dar offers hosting with highly secure servers."
+            },
+            {
+                "title": "Dar Hosting Servers Provide SSH Development",
+                "desc": "Dar hosting offers an exclusive feature for developers. Now, they can use the development environment with simplified steps at any time without complications. Dar continues to offer exclusive features."
+            },
+            {
+                "title": "Your Hosting Data is Available Anytime",
+                "desc": "When you decide to transfer to another company, your data will be available to you immediately without any hassle, provided all outstanding bills related to other services, if any, are settled."
+            },
+            {
+                "title": "Money-Back Guarantee",
+                "desc": "If you do not receive excellent hosting service, you can get your money back within 15 days. However, we always promise you a hosting service that gives your website the strength and speed it needs with advanced technologies and continuous, quick technical support."
+            },
+            {
+                "title": "Hosting that Excels with External Backup Technology",
+                "desc": "Dar offers hosting with one of its key features being an external backup service to ensure your data is preserved without losing any important information. If you are unable to pay for the hosting, don’t worry, as the backup service will keep your website's data safe."
+            },
+            {
+                "title": "Dar is a Certified Saudi Company",
+                "desc": "Dar is an officially registered Saudi company with the Ministry of Commerce and Industry, as well as the Ministry of Labor. Specializing in web services such as advanced website design, cloud servers with maximum efficiency, and a team experienced in web development and application programming. We welcome you to visit one of our offices to learn more about our services in detail or to request an official invoice. We are always happy to have you visit."
+            },
+            {
+                "title": "Dar, the Name Alone Gives You Assurance",
+                "desc": "Subscribing to hosting services with Dar gives you the full guarantee that your website’s data will be retained for years, even if you stop paying for years. Dar maintains backup copies of client files to keep them safe over the years."
+            }
+        ],
+        "seemore": "See More",
+        "seeless": "See Less",
+        "whyustitle": "Why Choose Dar Hosting?",
+        "whyusdes": [
+            "Top Line hosting packages suit the capabilities of all websites",
+            "Top Line provides direct and continuous technical support within minutes",
+            "Continuous technical support without any interruption during holidays or events, 24/7, 365 days a year",
+            "Top Line hosts several limited websites on one server",
+            "Top Line hosting offers ultra-fast and unlimited speed",
+            "Top Line hosting packages provide ample resources"
+        ],
+        "transfertitle": "Transfer to Top Line Hosting",
+        "transfersubtitle": "Move your website now to Top Line or create your new website",
+        "transferdesc": {
+            "title": "Transfer Your Website Hosting",
+            "desc": ["Free transfer of all your website files", "Free transfer of databases", "Free transfer of all emails", "Technical support starts from the transition"],
+            "btn": "Start transferring your website now"
+        },
+        "transferdesc2": {
+            "title": "Host Your New Website",
+            "desc": [
+                "Immediate activation of the hosting package as soon as payment is made.",
+                "Get a free domain as soon as the hosting package is chosen.",
+                "Free script installations of your choice, dear client."
+            ],
+            "btn": "Join us now"
+        }
+    }
+}
