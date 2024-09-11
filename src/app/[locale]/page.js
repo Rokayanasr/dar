@@ -39,7 +39,6 @@ export default function Home() {
     const [lang, setLang] = useState("ar"); // default language
     const [direction, setDirection] = useState("rtl"); // default direction
 
-  
     const domainservice = t.raw(`domainservice`);
     const packagekey = t.raw(`packagekey`);
     const packagedetail = t.raw(`packagedetail`);
@@ -60,7 +59,7 @@ export default function Home() {
         console.log(direction);
         console.log(domainservice);
     };
-  useEffect(() => {
+    useEffect(() => {
         // This will run only in the browser
         const lang = document.documentElement.lang;
         const direction = document.documentElement.dir;
@@ -353,12 +352,29 @@ export default function Home() {
                     <div className='flex md:flex-row flex-col justify-between gap-8'>
                         <div className='flex flex-col items-start justify-center bg-white w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail.title}</h3>
-                            <p className='text-justify md:w-[300px]'>{transferdetail.desc}</p>
+                            <div className='flex flex-col gap-2'>
+                                {transferdetail.desc.map((desc, index) => {
+                                    return (
+                                        <p key={index} className='text-justify md:w-[300px]'>
+                                           -{transferdetail.desc[index]}
+                                        </p>
+                                    );
+                                })}
+                            </div>
+
                             <button className='btn bg-blue p-3 hover:bg-darkbg text-white rounded-xl'>{transferdetail.btn}</button>
                         </div>
                         <div className='flex flex-col items-start justify-center bg-white w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail2.title}</h3>
-                            <p className='text-justify md:w-[300px]'>{transferdetail2.desc}</p>
+                            <div className='flex flex-col gap-2'>
+                                {transferdetail2.desc.map((desc, index) => {
+                                    return (
+                                        <p key={index} className='text-justify md:w-[300px]'>
+                                            -{transferdetail2.desc[index]}
+                                        </p>
+                                    );
+                                })}
+                            </div>{" "}
                             <button className='btn bg-blue p-3 hover:bg-darkbg text-white rounded-xl'>{transferdetail2.btn}</button>
                         </div>
                     </div>
