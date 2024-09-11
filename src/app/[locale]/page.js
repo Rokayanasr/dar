@@ -285,8 +285,8 @@ export default function Home() {
                                 );
                             })}
                         </div>
-                        <div className='flex items-center justify-end md:w-2/3'>
-                            <Image className='h-48  md:h-full' src={whyImg} alt='whyus' />
+                        <div className='flex items-center md:justify-end md:w-2/3'>
+                            <Image className='h-48  w-[90%] md:h-full' src={whyImg} alt='whyus' />
                         </div>
                     </div>
                 </div>

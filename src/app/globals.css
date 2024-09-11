@@ -10,6 +10,7 @@ body {
     padding: 0px 30px 0px 30px;
     font-family: "Cairo", sans-serif !important;
     width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 @media (max-width:720px) {
@@ -22,7 +23,7 @@ body {
 html{
   width: 100% !important;
   scroll-behavior: smooth;
-  
+  overflow-x: hidden !important;
 }
 
 @layer utilities {
