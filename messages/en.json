@@ -177,6 +177,25 @@
                 "Free script installations of your choice, dear client."
             ],
             "btn": "Join us now"
-        }
+        },
+        "worldtitle": "High-Speed Hosting",
+        "worldsubtitle": "Hosting your website is now closer to you than ever before. Our servers have extremely high connection speeds and are located in Europe, providing you with fast browsing and a ping rate of less than 70 ms. Try it now!",
+        "category": "Category",
+        "cherry": "Cherry",
+        "web": "Web",
+        "eCommerce": "eCommerce",
+        "business": "Business",
+        "entertainment": "Entertainment",
+        "portfolio": "Portfolio",
+        "apples": "Apples",
+        "media": "Media",
+        "brochure": "Brochure",
+        "nonprofit": "Nonprofit",
+        "educational": "Educational",
+        "projects": "Projects",
+        "infopreneur": "Infopreneur",
+        "personal": "Personal",
+        "wiki": "Wiki",
+        "forum": "Forum"
     }
 }

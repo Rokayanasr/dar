@@ -18,6 +18,14 @@ body {
     padding: 0px 15px 0px 15px;
 
   }
+  .wordlwide-bg{
+    background-image: url("/worldwide.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: fit-content !important;
+  }
+  
 }
 
 html{
@@ -43,3 +51,11 @@ html{
   background-size: 100%;
   background-position: bottom;
 }
+.wordlwide-bg{
+  background-image: url("/worldwide.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  height: 100vh;
+}
+

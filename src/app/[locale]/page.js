@@ -29,6 +29,7 @@ import {
     faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import saudi from "./../../../public/saudi-riyal.svg";
+import { Footer } from "./[footer]/footer";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -63,8 +64,8 @@ export default function Home() {
     };
 
     const toggleSidebar = () => {
-        setOpenSidebar(!openSidebar); 
-        console.log(openSidebar);// بيغير الحالة بين true و false
+        setOpenSidebar(!openSidebar);
+        console.log(openSidebar); // بيغير الحالة بين true و false
     };
 
     useEffect(() => {
@@ -136,26 +137,26 @@ export default function Home() {
                             </li>
                         </ul>
                         <div className='relative md:hidden block'>
-                        <button className='outline outline-[2px] rounded-xl outline-blue px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
-                            {t("chooselang")}
-                        </button>
-                        {isOpen && (
-                            <div className='absolute right-0 mt-2 bg-white border rounded-lg shadow-lg'>
-                                <ul className='flex flex-col'>
-                                    <li>
-                                        <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("en")}>
-                                            English
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("ar")}>
-                                            العربية
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        )}
-                    </div>
+                            <button className='outline outline-[2px] rounded-xl outline-blue px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                                {t("chooselang")}
+                            </button>
+                            {isOpen && (
+                                <div className='absolute right-0 mt-2 bg-white border rounded-lg shadow-lg'>
+                                    <ul className='flex flex-col'>
+                                        <li>
+                                            <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("en")}>
+                                                English
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("ar")}>
+                                                العربية
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
                     </div>
                     <div className='relative md:block hidden'>
                         <button className='outline outline-[2px] rounded-xl outline-blue px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
@@ -412,7 +413,19 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*  */}
+            {/* WORLDWIDE */}
+            <section className=''>
+                <div className='my-container '>
+                    <div className=' wordlwide-bg  flex items-center justify-center'>
+                        <div className='bg-white p-4 flex items-center justify-center flex-col gap-4 rounded-xl'>
+                            <h2 className='text-3xl text-center font-black uppercase text-blue'>{t("worldtitle")}</h2>
+                            <h3 className='text-2xl capitalize text-center text-darkblue'>{t("worldsubtitle")}</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Footer></Footer>
         </>
     );
 }
