@@ -30,6 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import saudi from "./../../../public/saudi-riyal.svg";
 import { Footer } from "./[footer]/footer";
+import Link from "next/link";
 
 export default function Home() {
     const t = useTranslations("HomePage");
@@ -80,9 +81,9 @@ export default function Home() {
         <>
             <nav className='bg-white'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6'>
-                    <a className='flex items-center space-x-3 rtl:space-x-reverse'>
+                    <Link href="/" className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <Image className='w-24' alt='logo' src={logo} />
-                    </a>
+                    </Link>
                     <button
                         data-collapse-toggle='navbar-default'
                         type='button'
@@ -99,41 +100,41 @@ export default function Home() {
                     <div className={`${openSidebar ? "block" : "hidden"} w-full md:block md:w-auto bg-transparent`} id='navbar-default'>
                         <ul className='font-medium flex flex-col md:items-center items-start p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent '>
                             <li>
-                                <a href='#' className='block capitalize py-2 px-3 text-white bg-blue-700 rounded-xl md:bg-blue md:text-white md:p-4' aria-current='page'>
+                                <Link href='/' className='block capitalize py-2 px-3 text-white bg-blue-700 rounded-xl md:bg-blue md:text-white md:p-4' aria-current='page'>
                                     {t("home")}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href='#'
+                                <Link
+                                    href='/#packages'
                                     className='block capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 '
                                 >
                                     {t("packages")}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href='#'
+                                <Link
+                                    href='/#features'
                                     className='block capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 '
                                 >
                                     {t("features")}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href='#'
+                                <Link
+                                    href='/#aboutus'
                                     className='block capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'
                                 >
                                     {t("aboutus")}
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href='#'
+                                <Link
+                                    href='/#subscription'
                                     className='block capitalize py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'
                                 >
                                     {t("contactus")}
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className='relative md:hidden block'>
@@ -227,7 +228,7 @@ export default function Home() {
             </section>
 
             {/* PACKAGES */}
-            <section>
+            <section id="packages">
                 <div className='my-container bg-gray rounded-xl flex flex-col items-center gap-8'>
                     {/* TEXT */}
                     <div className='flex flex-col gap-2 items-center'>
@@ -303,7 +304,7 @@ export default function Home() {
             </section>
 
             {/* WHY CHOOSE US */}
-            <section className='mt-8'>
+            <section id="aboutus" className='mt-8'>
                 <div className='my-container flex flex-col gap-8 bg-darkbg rounded-xl'>
                     <h2 className='text-3xl text-center font-black uppercase text-white'>{t("whyustitle")}</h2>
                     <div className='flex md:flex-row flex-col justify-center items-center w-full gap-8'>
@@ -325,7 +326,7 @@ export default function Home() {
             </section>
 
             {/* FEATURES */}
-            <section>
+            <section id="features">
                 <div className='my-container flex flex-col gap-8'>
                     <h2 className='text-3xl text-center font-black uppercase text-darkblue'>{t("featuretitle")}</h2>
                     <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 justify-between items-start'>
@@ -375,7 +376,7 @@ export default function Home() {
             </section>
 
             {/* TRANSFER */}
-            <section className='bg-cloud bg-gray rounded-xl'>
+            <section id="subscription" className='bg-cloud bg-gray rounded-xl'>
                 <div className='my-container flex flex-col gap-8  justify-center'>
                     <div className='flex flex-col gap-2'>
                         <h2 className='text-3xl text-center font-black uppercase text-darkblue'>{t("transfertitle")}</h2>
@@ -414,7 +415,7 @@ export default function Home() {
             </section>
 
             {/* WORLDWIDE */}
-            <section className=''>
+            <section id="worldwide" className=''>
                 <div className='my-container '>
                     <div className=' wordlwide-bg  flex items-center justify-center'>
                         <div className='bg-white p-4 flex items-center justify-center flex-col gap-4 rounded-xl'>
