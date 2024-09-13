@@ -77,7 +77,7 @@ export default function Home() {
 
     return (
         <>
-            <nav className='bg-white fixed w-full'>
+            <nav className='bg-white'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6'>
                     <a className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <Image className='w-24' alt='logo' src={logo} />
