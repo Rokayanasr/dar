@@ -23,6 +23,7 @@ export default async function RootLayout({ children, params }) {
         <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
             <body className={cairo.className}>
                 <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+                
             </body>
         </html>
     );

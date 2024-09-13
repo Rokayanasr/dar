@@ -5,7 +5,10 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslations } from "next-intl";
 import { getLocale } from "next-intl/server";
+import AOS from "aos";
 
+// import aos styles
+import "aos/dist/aos.css";
 import logo from "./../../../public/logo.png";
 import headerImgDesktop from "./../../../public/FEDEX-1074_wondersuite.avif";
 import headerImgMobile from "./../../../public/2.avif";
@@ -70,6 +73,10 @@ export default function Home() {
     };
 
     useEffect(() => {
+        AOS.init({
+            offset: 60,
+            duration: 1000,
+        });
         // This will run only in the browser
         const lang = document.documentElement.lang;
         const direction = document.documentElement.dir;
@@ -81,7 +88,7 @@ export default function Home() {
         <>
             <nav className='bg-white'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6'>
-                    <Link href="/" className='flex items-center space-x-3 rtl:space-x-reverse'>
+                    <Link href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <Image className='w-24' alt='logo' src={logo} />
                     </Link>
                     <button
@@ -206,7 +213,7 @@ export default function Home() {
                         <h2 className='md:text-3xl text-2xl text-center font-black uppercase'>{t("domaintitle")}</h2>
                         <h3 className='md:text-2xl text-xl md:text-center text-justify md:tracking-wide capitalize'>{t("domaindesc")}</h3>
                     </div>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col' data-aos='fade-up' data-aos-anchor-placement='top-center'>
                         <div className='flex'>
                             <button className={`md:w-2/12 w-3/12 bg-blue text-white font-bold ${direction === "rtl" ? "rounded-r-lg" : "rounded-l-lg"}`}>{t("domainbtn")}</button>
                             <input
@@ -228,7 +235,7 @@ export default function Home() {
             </section>
 
             {/* PACKAGES */}
-            <section id="packages">
+            <section id='packages'>
                 <div className='my-container bg-gray rounded-xl flex flex-col items-center gap-8'>
                     {/* TEXT */}
                     <div className='flex flex-col gap-2 items-center'>
@@ -264,7 +271,7 @@ export default function Home() {
                                 },
                                 index
                             ) => (
-                                <div key={index} className='flex flex-col gap-4  justify-center text-darkblue bg-white rounded-xl m-2 p-4 md:p-8'>
+                                <div data-aos='fade-up' key={index} className='flex flex-col gap-4  justify-center text-darkblue bg-white rounded-xl m-2 p-4 md:p-8'>
                                     <h3 className='text-2xl font-bold uppercase text-center text-darkblue flex gap-3 items-center justify-center'>
                                         {title}
 
@@ -304,11 +311,11 @@ export default function Home() {
             </section>
 
             {/* WHY CHOOSE US */}
-            <section id="aboutus" className='mt-8'>
+            <section id='aboutus' className='mt-8'>
                 <div className='my-container flex flex-col gap-8 bg-darkbg rounded-xl'>
                     <h2 className='text-3xl text-center font-black uppercase text-white'>{t("whyustitle")}</h2>
                     <div className='flex md:flex-row flex-col justify-center items-center w-full gap-8'>
-                        <div className=' text-white text-justify flex flex-col sm:order-first order-last md:w-1/3 gap-4'>
+                        <div data-aos='fade-left' className=' text-white text-justify flex flex-col sm:order-first order-last md:w-1/3 gap-4'>
                             {whyusdetail.map((detail, index) => {
                                 return (
                                     <h4 className='flex gap-4' key={index}>
@@ -318,7 +325,7 @@ export default function Home() {
                                 );
                             })}
                         </div>
-                        <div className='flex items-center md:justify-end md:w-2/3'>
+                        <div data-aos='fade-right' className='flex items-center md:justify-end md:w-2/3'>
                             <Image className='h-48  w-[90%] md:h-full' src={whyImg} alt='whyus' />
                         </div>
                     </div>
@@ -326,7 +333,7 @@ export default function Home() {
             </section>
 
             {/* FEATURES */}
-            <section id="features">
+            <section id='features'>
                 <div className='my-container flex flex-col gap-8'>
                     <h2 className='text-3xl text-center font-black uppercase text-darkblue'>{t("featuretitle")}</h2>
                     <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 justify-between items-start'>
@@ -344,6 +351,7 @@ export default function Home() {
 
                             return (
                                 <div
+                                    data-aos='flip-down'
                                     key={index}
                                     className={`flex flex-col gap-4 m-2 bg-gray p-8 rounded-xl text-darkblue items-center justify-between ${
                                         expanded[index] ? "h-fit" : "h-[370px]"
@@ -376,14 +384,14 @@ export default function Home() {
             </section>
 
             {/* TRANSFER */}
-            <section id="subscription" className='bg-cloud bg-gray rounded-xl'>
+            <section id='subscription' className='bg-cloud bg-gray rounded-xl'>
                 <div className='my-container flex flex-col gap-8  justify-center'>
                     <div className='flex flex-col gap-2'>
                         <h2 className='text-3xl text-center font-black uppercase text-darkblue'>{t("transfertitle")}</h2>
                         <h3 className='text-2xl capitalize text-center text-darkblue'>{t("transfersubtitle")}</h3>
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-8'>
-                        <div className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
+                        <div data-aos="zoom-in-down" className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail.title}</h3>
                             <div className='flex flex-col gap-2'>
                                 {transferdetail.desc.map((desc, index) => {
@@ -397,7 +405,7 @@ export default function Home() {
 
                             <button className='btn bg-blue p-3 hover:bg-darkbg text-white rounded-xl'>{transferdetail.btn}</button>
                         </div>
-                        <div className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
+                        <div data-aos="zoom-in-down" className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail2.title}</h3>
                             <div className='flex flex-col gap-2'>
                                 {transferdetail2.desc.map((desc, index) => {
@@ -415,7 +423,7 @@ export default function Home() {
             </section>
 
             {/* WORLDWIDE */}
-            <section id="worldwide" className=''>
+            <section id='worldwide' className=''>
                 <div className='my-container '>
                     <div className=' wordlwide-bg  flex items-center justify-center'>
                         <div className='bg-white p-4 flex items-center justify-center flex-col gap-4 rounded-xl'>
