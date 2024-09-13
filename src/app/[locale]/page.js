@@ -100,7 +100,7 @@ export default function Home() {
                     <div className={`${openSidebar ? "block" : "hidden"} w-full md:block md:w-auto bg-transparent`} id='navbar-default'>
                         <ul className='font-medium flex flex-col md:items-center items-start p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent '>
                             <li>
-                                <Link href='/' className='block capitalize py-2 px-3 text-white bg-blue-700 rounded-xl md:bg-blue md:text-white md:p-4' aria-current='page'>
+                                <Link href='/' className='block capitalize py-2 px-3 text-darkblue bg-blue-700 rounded-xl md:bg-blue md:text-white md:p-4' aria-current='page'>
                                     {t("home")}
                                 </Link>
                             </li>
