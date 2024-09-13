@@ -33,6 +33,8 @@ import saudi from "./../../../public/saudi-riyal.svg";
 export default function Home() {
     const t = useTranslations("HomePage");
     const [isOpen, setIsOpen] = useState(false);
+    const [openSidebar, setOpenSidebar] = useState(false);
+
     const router = useRouter();
 
     // Initialize lang and direction with default values
@@ -59,6 +61,12 @@ export default function Home() {
         console.log(direction);
         console.log(domainservice);
     };
+
+    const toggleSidebar = () => {
+        setOpenSidebar(!openSidebar); 
+        console.log(openSidebar);// بيغير الحالة بين true و false
+    };
+
     useEffect(() => {
         // This will run only in the browser
         const lang = document.documentElement.lang;
@@ -69,7 +77,7 @@ export default function Home() {
 
     return (
         <>
-            <nav className='bg-white border-gray-200 '>
+            <nav className='bg-white fixed w-full'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6'>
                     <a className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <Image className='w-24' alt='logo' src={logo} />
@@ -77,6 +85,7 @@ export default function Home() {
                     <button
                         data-collapse-toggle='navbar-default'
                         type='button'
+                        onClick={toggleSidebar}
                         className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
                         aria-controls='navbar-default'
                         aria-expanded='false'
@@ -86,8 +95,8 @@ export default function Home() {
                             <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M1 1h15M1 7h15M1 13h15' />
                         </svg>
                     </button>
-                    <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-                        <ul className='font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white '>
+                    <div className={`${openSidebar ? "block" : "hidden"} w-full md:block md:w-auto bg-transparent`} id='navbar-default'>
+                        <ul className='font-medium flex flex-col md:items-center items-start p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent '>
                             <li>
                                 <a href='#' className='block capitalize py-2 px-3 text-white bg-blue-700 rounded-xl md:bg-blue md:text-white md:p-4' aria-current='page'>
                                     {t("home")}
@@ -126,8 +135,29 @@ export default function Home() {
                                 </a>
                             </li>
                         </ul>
+                        <div className='relative md:hidden block'>
+                        <button className='outline outline-[2px] rounded-xl outline-blue px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
+                            {t("chooselang")}
+                        </button>
+                        {isOpen && (
+                            <div className='absolute right-0 mt-2 bg-white border rounded-lg shadow-lg'>
+                                <ul className='flex flex-col'>
+                                    <li>
+                                        <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("en")}>
+                                            English
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className='block px-4 py-2 text-gray-900 hover:bg-gray-100' onClick={() => handleLanguageChange("ar")}>
+                                            العربية
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
-                    <div className='relative'>
+                    </div>
+                    <div className='relative md:block hidden'>
                         <button className='outline outline-[2px] rounded-xl outline-blue px-4 py-2' onClick={() => setIsOpen(!isOpen)}>
                             {t("chooselang")}
                         </button>
@@ -150,6 +180,7 @@ export default function Home() {
                     </div>
                 </div>
             </nav>
+
             <header className='bg-darkbg h-fit rounded-2xl'>
                 <div className='flex flex-col items-center justify-between h-full gap-6 my-container w-full text-white'>
                     <div className='flex flex-col gap-6 items-center'>
@@ -350,13 +381,13 @@ export default function Home() {
                         <h3 className='text-2xl capitalize text-center text-darkblue'>{t("transfersubtitle")}</h3>
                     </div>
                     <div className='flex md:flex-row flex-col justify-between gap-8'>
-                        <div className='flex flex-col items-start justify-center bg-white w-fit p-8 gap-8 rounded-xl'>
+                        <div className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail.title}</h3>
                             <div className='flex flex-col gap-2'>
                                 {transferdetail.desc.map((desc, index) => {
                                     return (
                                         <p key={index} className='text-justify md:w-[300px]'>
-                                           -{transferdetail.desc[index]}
+                                            -{transferdetail.desc[index]}
                                         </p>
                                     );
                                 })}
@@ -364,7 +395,7 @@ export default function Home() {
 
                             <button className='btn bg-blue p-3 hover:bg-darkbg text-white rounded-xl'>{transferdetail.btn}</button>
                         </div>
-                        <div className='flex flex-col items-start justify-center bg-white w-fit p-8 gap-8 rounded-xl'>
+                        <div className='flex flex-col items-start justify-center bg-white md:w-fit p-8 gap-8 rounded-xl'>
                             <h3 className='text-2xl text-center font-bold'>{transferdetail2.title}</h3>
                             <div className='flex flex-col gap-2'>
                                 {transferdetail2.desc.map((desc, index) => {
