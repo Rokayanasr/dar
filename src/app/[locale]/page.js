@@ -73,10 +73,10 @@ export default function Home() {
     };
 
     useEffect(() => {
-        AOS.init({
-            offset: 50,
-            duration: 1500,
-        });
+        // AOS.init({
+        //     offset: 50,
+        //     duration: 1500,
+        // });
         // This will run only in the browser
         const lang = document.documentElement.lang;
         const direction = document.documentElement.dir;
