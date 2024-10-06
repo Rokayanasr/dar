@@ -74,7 +74,7 @@ export default function Home() {
 
     useEffect(() => {
         AOS.init({
-            offset: 50,
+            offset: 0,
             duration: 1500,
         });
         // This will run only in the browser
